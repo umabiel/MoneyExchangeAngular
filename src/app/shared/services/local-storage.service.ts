@@ -20,4 +20,8 @@ export class LocalStorageService {
     localStorage.removeItem(this.localStorageTTL);
   }
 
+  getRates() {
+    return JSON.parse( localStorage.getItem(this.localStorageKey) );
+  }
+
 }
