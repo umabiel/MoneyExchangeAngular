@@ -45,21 +45,27 @@
 
   <div class="jumbotron">
     <div class="container">
-      <div class="col-12p">
+      <div class="exchange">
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <app-input-control placeholder="EU"></app-input-control>
+                <app-money-in placeholder="{{ rate.base }}" type="from" (moneyInputEvent)="getmoney($event)"></app-money-in>
+              <!-- <app-input-control placeholder="{{ rate.base }}" type="from" (moneyInputEvent)="getmoney($event)"></app-input-control> -->
+              <!-- <app-input-control placeholder="{{ rate.base }}" type="from"></app-input-control> -->
             </div>
             <div class="form-group col-md-6">
-              <app-input-control placeholder="USD"></app-input-control>
+              <app-money-out placeholder="USD" [value]="resultExchange" type="to"></app-money-out>
+              <!-- <app-input-control placeholder="USD" value="resultExchange" type="to"></app-input-control> -->
             </div>
           </div>
         </form>
       </div>
+      <div class="rate-exchange text-center">
+        <small class="form-text text-muted">{{ rate.rates['USD'] }}</small>
+      </div>
     </div>
     <div class="container">
-      <button class="btn btn-success form-control">Calcular</button>
+      <button class="btn btn-success form-control" (click)="calculate()" >Calcular</button>
     </div>
   </div>
 </main>
