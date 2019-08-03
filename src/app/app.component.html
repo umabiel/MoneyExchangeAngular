@@ -1,39 +1,67 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <div class="col">
-    <div class="text-center">
-      <svg
-        class="bd-placeholder-img rounded-circle"
-        width="140"
-        height="140"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
-        role="img"
-        aria-label="Placeholder: 140x140"
-      >
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#777"></rect>
-        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-      </svg>
-    </div>
-
-    <router-outlet></router-outlet>
-  </div>
-</div>
-
-<div class="jumbotron">
+<main class="h-100">
   <div class="container">
-    <app-input-control placeholder="$"></app-input-control>
-    <app-input-control placeholder="S/."></app-input-control>
-  </div>
-  <div class="container">
-    <button class="btn btn-success form-control">Calcular</button>
-  </div>
-</div>
-
-<div class="jumbotron">
-    <div class="container">
-        <app-footer></app-footer>
+    <div class="col">
+      <div class="text-center py-3">
+        <svg
+          class="bd-placeholder-img rounded-circle"
+          width="140"
+          height="140"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+          role="img"
+          aria-label="Placeholder: 140x140"
+        >
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#777"></rect>
+          <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+        </svg>
       </div>
-</div>
+    </div>
+    <div class="row text-center py-3">
+      <div class="col">
+        <span class="badge badge-secondary">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </div>
+      <div class="col">
+        <span class="badge badge-secondary"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </div>
+      <div class="col">
+        <span class="badge badge-secondary"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </div>
+      <div class="col">
+        <span class="badge badge-secondary"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-12p">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <app-input-control placeholder="EU"></app-input-control>
+            </div>
+            <div class="form-group col-md-6">
+              <app-input-control placeholder="USD"></app-input-control>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <button class="btn btn-success form-control">Calcular</button>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>
