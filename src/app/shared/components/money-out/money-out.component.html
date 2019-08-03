@@ -1,0 +1,22 @@
+<!-- <input class="form-control" placeholder="{{placeholder}}" [(ngModel)]="value"> -->
+
+<div class="input-group mb-3">
+    <!-- <div class="input-group-prepend">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&euro;</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">&euro;</a>
+        <a class="dropdown-item" href="#">$</a>
+      </div>
+    </div> -->
+
+    <div ngbDropdown class="input-group-prepend">
+        <button class="btn btn-outline-secondary" id="dropdown1" ngbDropdownToggle>USD</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item disabled">USD</button>
+          <button class="dropdown-item disabled">EUR</button>
+          <button class="dropdown-item disabled">PEN</button>
+        </div>
+      </div>
+
+    <input class="form-control" placeholder="{{placeholder}}" [(ngModel)]="value" readonly="readonly">
+</div>
