@@ -1,3 +1,9 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c4c7ca;
+  opacity: 1; /* Firefox */
+}
+
 input {
   text-align: center;
 }
+
