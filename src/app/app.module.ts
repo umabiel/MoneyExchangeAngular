@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
-import { InputControlComponent } from './shared/components/input-control/input-control.component';
 import { MoneyInComponent } from './shared/components/money-in/money-in.component';
 import { MoneyOutComponent } from './shared/components/money-out/money-out.component';
 
@@ -16,7 +15,6 @@ import { MoneyOutComponent } from './shared/components/money-out/money-out.compo
   declarations: [
     AppComponent,
     FooterComponent,
-    InputControlComponent,
     MoneyInComponent,
     MoneyOutComponent
   ],
