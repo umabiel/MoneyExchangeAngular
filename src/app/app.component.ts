@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   private money: number;
   public rate: RateResponseExchange = { base: '', rates: [] };
-  public resultExchange: number;
+  public resultExchange: string;
 
   constructor(
     private exchangeService: ExchangeService,
@@ -34,7 +34,8 @@ export class AppComponent implements OnInit {
   calculate() {
     const rate = this.exchangeService.getRateForExchange('USD');
     console.log(rate * this.money);
-    this.resultExchange = rate * this.money;
+    const result = (rate * this.money).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    this.resultExchange = result;
   }
 
 }
