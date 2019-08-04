@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
     this.exchangeService.getExchange().subscribe((res: RateResponseExchange) => {
       this.rate = res;
       this.locaStorageService.saveStorage(res);
-      console.log('RATE ', this.exchangeService.getRateForExchange('USD'));
     });
   }
 
