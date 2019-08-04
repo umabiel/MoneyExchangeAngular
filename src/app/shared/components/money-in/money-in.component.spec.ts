@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoneyInComponent } from './money-in.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('MoneyInComponent', () => {
   let component: MoneyInComponent;
@@ -8,6 +9,10 @@ describe('MoneyInComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+        ReactiveFormsModule
+      ],
       declarations: [ MoneyInComponent ]
     })
     .compileComponents();
